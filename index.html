@@ -183,24 +183,24 @@
 <script>
 'use strict'
 
-var FIREBALL_SIZE = 22;
-var WIZARD_SPEED = 3;
-var WIZARD_WIDTH = 70;
-var HALF_OF_WIZARD_WIDTH = WIZARD_WIDTH/2;
+var fireballSize = 22;
+var wizardSpeed = 3;
+var wizardWidth = 70;
+var fireballSize = 22;
 var FIREBALL_SPEED_TO_WIND = 5;
-var FIREBALL_SPEED_AGAINST_WIND=2;
-var PROPORTION_OF_WIZARD_HEIGHT=1.337;
+var FIREBALL_SPEED_AGAINST_WIND = 2;
+var PROPORTION_OF_WIZARD_HEIGHT = 1.337;
 
 var getFireballSpeed = function(left) {
   return left ? FIREBALL_SPEED_TO_WIND : FIREBALL_SPEED_AGAINST_WIND;
 };
 
 var getWizardHeight = function() {
-  return WIZARD_WIDTH * PROPORTION_OF_WIZARD_HEIGHT;
+  return wizardWidth * PROPORTION_OF_WIZARD_HEIGHT;
 };
 
 var getWizardX = function(width) {
-  return width / 2 - HALF_OF_WIZARD_WIDTH;
+  return width / 2 - wizardWidth / 2;  // wizard starts to act at the center of canvas width
 };
 
 var getWizardY = function(height) {
