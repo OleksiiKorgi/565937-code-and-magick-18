@@ -6,6 +6,9 @@ var CLOUD_X = 100;
 var CLOUD_Y = 10;
 var GAP = 10;
 var FONT_GAP = 20;
+var BAR_CHART_GAP_Y = 100;
+var BAR_CHART_WIDTH = 40;
+var BAR_CHART_HEIGHT = 150;
 
 var renderCloud = function (ctx, x, y, color) {
   ctx.fillStyle = color;
@@ -19,10 +22,19 @@ window.renderStatistics = function (ctx, names, times) {
 
   ctx.font = '16px PT Mono';
   ctx.fillStyle = 'black';
-  ctx.fillText('Ура вы победили!', CLOUD_X + FONT_GAP * 2, CLOUD_Y + GAP + FONT_GAP);
-  ctx.fillText('Список результатов:', CLOUD_X + FONT_GAP * 2, CLOUD_Y + GAP + FONT_GAP * 2);
+  ctx.fillText ('Ура вы победили!', CLOUD_X + FONT_GAP * 2, CLOUD_Y + GAP + FONT_GAP);
+  ctx.fillText ('Список результатов:', CLOUD_X + FONT_GAP * 2, CLOUD_Y + GAP + FONT_GAP * 2);
 
-  ctx.fillText('Вы')
+  ctx.fillText ('Вы', CLOUD_X + FONT_GAP * 2, BAR_CHART_GAP_Y);
+  ctx.fillRect (CLOUD_X + FONT_GAP * 2, BAR_CHART_GAP_Y + FONT_GAP, BAR_CHART_WIDTH, BAR_CHART_HEIGHT);
 
+  ctx.fillText ('Иван', CLOUD_X * 2 + FONT_GAP *2 , BAR_CHART_GAP_Y);
+  ctx.fillRect (CLOUD_X * 2 + FONT_GAP *2, BAR_CHART_GAP_Y + FONT_GAP, BAR_CHART_WIDTH, BAR_CHART_HEIGHT);
+
+  ctx.fillText ('Юлия', CLOUD_X * 3 + FONT_GAP * 2 , BAR_CHART_GAP_Y);
+  ctx.fillRect (CLOUD_X * 3 + FONT_GAP * 2, BAR_CHART_GAP_Y + FONT_GAP, BAR_CHART_WIDTH, BAR_CHART_HEIGHT);
+
+  ctx.fillText ('Игорь', CLOUD_X * 4 + FONT_GAP * 2, BAR_CHART_GAP_Y );
+  ctx.fillRect (CLOUD_X * 4 + FONT_GAP * 2, BAR_CHART_GAP_Y + FONT_GAP,BAR_CHART_WIDTH, BAR_CHART_HEIGHT);
 
 };
