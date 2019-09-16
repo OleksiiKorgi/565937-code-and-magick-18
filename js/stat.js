@@ -25,16 +25,16 @@ window.renderStatistics = function (ctx, names, times) {
   ctx.fillText ('Ура вы победили!', CLOUD_X + FONT_GAP * 2, CLOUD_Y + GAP + FONT_GAP);
   ctx.fillText ('Список результатов:', CLOUD_X + FONT_GAP * 2, CLOUD_Y + GAP + FONT_GAP * 2);
 
-  ctx.fillText ('Вы', CLOUD_X + FONT_GAP * 2, BAR_CHART_GAP_Y);
-  ctx.fillRect (CLOUD_X + FONT_GAP * 2, BAR_CHART_GAP_Y + FONT_GAP, BAR_CHART_WIDTH, BAR_CHART_HEIGHT);
+  var indexName = 0;
+  var userNames = ['Вы', 'Иван', 'Юлия', 'Игорь'];
 
-  ctx.fillText ('Иван', CLOUD_X * 2 + FONT_GAP *2 , BAR_CHART_GAP_Y);
-  ctx.fillRect (CLOUD_X * 2 + FONT_GAP *2, BAR_CHART_GAP_Y + FONT_GAP, BAR_CHART_WIDTH, BAR_CHART_HEIGHT);
+for (var i = 0; i < userNames.length; i++) {
+  ctx.fillText (userNames[i], CLOUD_X + (CLOUD_X * i) + FONT_GAP * 2, BAR_CHART_GAP_Y);
+  ctx.fillRect (CLOUD_X + (CLOUD_X * i) + FONT_GAP * 2, BAR_CHART_GAP_Y + FONT_GAP, BAR_CHART_WIDTH, BAR_CHART_HEIGHT);
+}
 
-  ctx.fillText ('Юлия', CLOUD_X * 3 + FONT_GAP * 2 , BAR_CHART_GAP_Y);
-  ctx.fillRect (CLOUD_X * 3 + FONT_GAP * 2, BAR_CHART_GAP_Y + FONT_GAP, BAR_CHART_WIDTH, BAR_CHART_HEIGHT);
 
-  ctx.fillText ('Игорь', CLOUD_X * 4 + FONT_GAP * 2, BAR_CHART_GAP_Y );
-  ctx.fillRect (CLOUD_X * 4 + FONT_GAP * 2, BAR_CHART_GAP_Y + FONT_GAP,BAR_CHART_WIDTH, BAR_CHART_HEIGHT);
+
+  
 
 };
